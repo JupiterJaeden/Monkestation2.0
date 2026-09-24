@@ -565,14 +565,15 @@
 	update_appearance(UPDATE_ICON_STATE)
 
 /atom/movable/screen/lobby/button/server/proc/is_available()
-	if(!SSplexora.enabled)
-	  // Defaults to enabled since there's no other source for if its up or not.
-		return TRUE
+	return FALSE // we have no sister servers yet!
+	// if(!SSplexora.enabled)
+	//   // Defaults to enabled since there's no other source for if its up or not.
+	// 	return TRUE
 
-	if(SSplexora.current_server_id == server_id)
-		return TRUE
+	// if(SSplexora.current_server_id == server_id)
+	// 	return TRUE
 
-	return SSplexora.up_servers[server_id]
+	// return SSplexora.up_servers[server_id]
 
 /atom/movable/screen/lobby/button/server/Click(location, control, params)
 	. = ..()
