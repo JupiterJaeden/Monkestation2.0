@@ -62,8 +62,6 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 	var/datum/spawners_menu/spawners_menu
 	var/datum/minigames_menu/minigames_menu
 
-	COOLDOWN_DECLARE(respawn_timer)
-
 /mob/dead/observer/Initialize(mapload)
 	set_invisibility(GLOB.observer_default_invisibility)
 
@@ -153,13 +151,6 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 	SSpoints_of_interest.make_point_of_interest(src)
 	add_traits(list(TRAIT_HEAR_THROUGH_DARKNESS, TRAIT_CAN_HEAR_MUSIC), INNATE_TRAIT)
 	on_can_hear_music_trait_gain(src)
-
-	COOLDOWN_START(src, respawn_timer, RESPAWN_TIMER)
-
-/mob/dead/observer/get_status_tab_items()
-	. = ..()
-	if (!persistent_client.has_observed)
-		. += "Respawn Timer: [floor(COOLDOWN_TIMELEFT(src, respawn_timer) / 10)] seconds remain."
 
 /mob/dead/observer/get_photo_description(obj/item/camera/camera)
 	if(!invisibility || camera.see_ghosts)
@@ -282,7 +273,10 @@ Works together with spawning an observer, noted above.
 	if(isliving(former_mob))
 		recordable_time = former_mob.timeofdeath
 
-	ghost.persistent_client?.time_of_death = recordable_time
+	if (ghost.persistent_client)
+		ghost.persistent_client.time_of_death = recordable_time
+		if (!COOLDOWN_STARTED(ghost.persistent_client, respawn_timer))
+			COOLDOWN_START(ghost.persistent_client, respawn_timer, RESPAWN_TIMER)
 	SEND_SIGNAL(src, COMSIG_MOB_GHOSTIZED)
 	return ghost
 

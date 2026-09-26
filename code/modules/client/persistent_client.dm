@@ -44,6 +44,9 @@ GLOBAL_LIST_EMPTY_TYPED(persistent_clients, /datum/persistent_client)
 	///Used for admin logging when player respawns to menu and then latejoins.
 	var/last_name_before_respawn = ""
 
+	///Cooldown for the respawn timer
+	COOLDOWN_DECLARE(respawn_timer)
+
 	/// Tracks achievements they have earned
 	var/datum/achievement_data/achievements
 
