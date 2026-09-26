@@ -844,9 +844,9 @@
 		qdel(M)
 		return
 
-	message_admins("Player [name], ckey: [client.ckey], has respawned to main menu.")
+	message_admins("Player [real_name], ckey: [client.ckey], has respawned to main menu.")
 	client.persistent_client.has_respawned_to_menu = TRUE
-	client.persistent_client.last_name_before_respawn = name
+	client.persistent_client.last_name_before_respawn = real_name
 
 	M.PossessByPlayer(key)
 
