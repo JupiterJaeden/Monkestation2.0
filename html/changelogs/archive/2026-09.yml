@@ -151,3 +151,11 @@
   - rscadd: Added Reveal ability to Revenants to willingly reveal themselves.
   ashallaryn:
   - image: modified twintail floor hairstyle north, east, south, west sprites
+2026-09-20:
+  JupiterJaeden:
+  - balance: Insulation (of any kind) now protects against door shocks regardless of how powerful the shock is.
+  - balance: Getting shocked by an extremely powered door now husks you instead of dusting you.
+  - admin: Allows dead crew (NOT observers or dead ghost roles) to vote in the automatic shuttle vote.
+  - bugfix: Resisting grabs no longer freezes you in place or prevents you from clicking on things for several seconds after successfully resisting the grab.
+  - bugfix: Resisting grabs now has a consistent cooldown (2 seconds) between moving resist and using the actual resist verb, and the cooldown applies to both.
+  - bugfix: Using the resist verb no longer locks you out of clicking on anything for a couple seconds. You only get a click cooldown if you actually resist something - and not for successfully resisting grabs or buckles.
