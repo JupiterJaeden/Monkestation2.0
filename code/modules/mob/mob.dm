@@ -846,6 +846,7 @@
 
 	message_admins("Player [name], ckey: [client.ckey], has respawned to main menu.")
 	client.persistent_client.has_respawned_to_menu = TRUE
+	client.persistent_client.last_name_before_respawn = name
 
 	M.PossessByPlayer(key)
 

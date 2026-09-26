@@ -41,6 +41,9 @@ GLOBAL_LIST_EMPTY_TYPED(persistent_clients, /datum/persistent_client)
 	///TRUE if this client has joined the game via observing, FALSE otherwise
 	var/has_observed = FALSE
 
+	///Used for admin logging when player respawns to menu and then latejoins.
+	var/last_name_before_respawn = ""
+
 	/// Tracks achievements they have earned
 	var/datum/achievement_data/achievements
 

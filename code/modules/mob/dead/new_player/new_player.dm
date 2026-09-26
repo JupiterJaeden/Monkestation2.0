@@ -351,7 +351,7 @@
 		SSchallenges.apply_challenges(persistent_client)
 
 		if(persistent_client.has_respawned_to_menu)
-			message_admins("ckey: [character.ckey], has respawned into the game as [character.name], job: [job.title].")
+			message_admins("ckey: [character.ckey], has respawned into the game as [character.name], job: [job.title]. Previous name: [persistent_client.last_name_before_respawn]")
 
 	#define IS_NOT_CAPTAIN 0
 	#define IS_ACTING_CAPTAIN 1
