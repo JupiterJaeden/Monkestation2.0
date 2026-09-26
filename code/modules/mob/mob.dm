@@ -797,14 +797,13 @@
 	set name = "Respawn"
 	set category = "OOC"
 
-	/*
+
 	if (CONFIG_GET(flag/norespawn))
 		if (!check_rights_for(usr.client, R_ADMIN))
 			to_chat(usr, span_boldnotice("Respawning is not enabled!"))
 			return
 		else if (tgui_alert(usr, "Respawning is currently disabled, do you want to use your permissions to circumvent it?", "Respawn", list("Yes", "No")) != "Yes")
 			return
-	*/
 
 	if (isobserver(src))
 		if (client?.persistent_client.has_observed)
