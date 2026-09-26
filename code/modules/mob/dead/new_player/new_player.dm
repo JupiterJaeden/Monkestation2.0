@@ -254,7 +254,7 @@
 		if(JOB_UNAVAILABLE_INVALID_RESPAWN)
 			return "You cannot respawn as Command or Security."
 		if(JOB_UNAVAILABLE_PAST_CHARACTER)
-			return "You cannot respawn as a character you have already played."
+			return "You cannot respawn as a character slot you have already played."
 
 	return GENERIC_JOB_UNAVAILABLE_ERROR
 
