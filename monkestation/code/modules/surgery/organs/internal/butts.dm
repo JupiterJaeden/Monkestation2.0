@@ -9,10 +9,8 @@
 	throw_speed = 1
 	force = 4
 	embed_type = /datum/embedding/butt
-	hitsound = 'sound/misc/fart1.ogg'
 	body_parts_covered = HEAD
 	slot_flags = ITEM_SLOT_HEAD
-	var/list/sound_effect  = list('sound/misc/fart1.ogg', 'sound/effects/fart2.ogg', 'sound/effects/fart3.ogg', 'sound/effects/fart4.ogg')
 	var/atmos_gas = "miasma=0.25;TEMP=310.15" //310.15 is body temperature
 	var/cooling_down = FALSE
 	var/superfart_armed = FALSE
@@ -27,7 +25,6 @@
 /obj/item/organ/internal/butt/atomic
 	name = "Atomic Ass"
 	desc = "A highly radioactive and unstable posterior. Anyone with this is a walking war crime."
-	sound_effect = list("sound/items/geiger/low1.ogg", "sound/items/geiger/low2.ogg", "sound/items/geiger/low3.ogg", "sound/items/geiger/low4.ogg")
 	atmos_gas = "tritium=5;TEMP=600"
 	icon_state = "atomicass"
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
@@ -49,7 +46,6 @@
 	desc = "Designed from the ground up to create advanced humor."
 	icon_state = "roboass"
 	organ_flags = ORGAN_ROBOTIC
-	sound_effect = list('sound/machines/buzz-sigh.ogg', 'sound/machines/buzz-two.ogg', 'sound/machines/terminal_error.ogg', 'sound/weapons/ring.ogg')
 	atmos_gas = "co2=0.25;TEMP=310.15"
 
 //CLOWN ASS
@@ -58,7 +54,6 @@
 	desc = "A poor clown has been separated with their most funny organ."
 	atmos_gas = "n2o=0.25;TEMP=310.15"
 	icon_state = "clownass"
-	sound_effect = list('sound/items/party_horn.ogg', 'sound/items/bikehorn.ogg')
 
 /obj/item/organ/internal/butt/clown/Initialize(mapload)
 	. = ..()
@@ -69,21 +64,18 @@
 	name = "The Iron Butt"
 	desc = "A prosthetic replacement posterior."
 	icon_state = "ironass"
-	sound_effect = list('sound/machines/clockcult/integration_cog_install.ogg', 'sound/effects/clang.ogg')
 
 //SKELETAL ASS
 /obj/item/organ/internal/butt/skeletal
 	name = "Skeletal Butt"
 	desc = "You don't understand how this works!"
 	atmos_gas = "o2=0.25;TEMP=310.15"
-	sound_effect = list("sound/voice/laugh/skeleton/skeleton_laugh.ogg")
 	icon_state =  "skeleass"
 
 //PLASMAMAN ASS
 /obj/item/organ/internal/butt/plasma
 	name = "Plasmaman Butt"
 	desc = "You REALLY don't understand how this works!"
-	sound_effect = list("sound/voice/laugh/skeleton/skeleton_laugh.ogg")
 	atmos_gas = "plasma=0.25;TEMP=310.15"
 	icon_state = "plasmaass"
 
@@ -103,10 +95,6 @@
 /obj/effect/immovablerod/butt/Initialize(mapload)
 	. = ..()
 	src.SpinAnimation(5, -1)
-
-/obj/effect/immovablerod/butt/Bump(atom/clong)
-	playsound(src,'sound/misc/fart1.ogg', 100, TRUE, 10, pressure_affected = FALSE)
-	..()
 
 /mob/living/carbon/human/proc/dagoth_kill_smite(obj/item/organ/internal/butt/butt, explode = TRUE)
 	if(!QDELETED(butt))
