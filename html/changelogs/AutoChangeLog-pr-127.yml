@@ -1,0 +1,7 @@
+author: "Absolucy"
+delete-after: True
+changes:
+  - code_imp: "(SmArtKar) Optimized some hot atmos procs."
+  - code_imp: "(SmArtKar) Optimized /datum/gas_mixture/proc/archive() by ~42%"
+  - refactor: "(Metek) Thanks to cutting edge technological advances, check_breath() calculations have been optimized by approximately 41% ( using alist() instead of list() )"
+  - code_imp: "(SmArtKar) Optimized bodypart code"
