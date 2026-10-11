@@ -1,7 +1,9 @@
+/* Tutorials currently disabled due to being broken + woefully incomplete.
+
 /// Namespace for housing code relating to giving contextual tutorials to users.
 SUBSYSTEM_DEF(tutorials)
 	name = "Tutorials"
-	flags = SS_NO_FIRE | SS_NO_INIT // Tutorials currently disabled due to being broken + woefully incomplete.
+	flags = SS_NO_FIRE
 
 	/// A mapping of /datum/tutorial type to their manager singleton.
 	/// You probably shouldn't be indexing this directly.
@@ -109,3 +111,4 @@ SUBSYSTEM_DEF(tutorials)
 		return
 
 	tutorial_manager.mark_as_completed(ckey)
+*/
