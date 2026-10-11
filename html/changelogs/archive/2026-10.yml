@@ -175,3 +175,52 @@
       issues on the bug tracker
   - qol: the command bar is now a bit prettier, and also autocompletes things like
       typepaths and mob targets (primarily useful for admins)
+2026-10-11:
+  Absolucy:
+  - code_imp: (SmArtKar) Optimized some hot atmos procs.
+  - code_imp: (SmArtKar) Optimized /datum/gas_mixture/proc/archive() by ~42%
+  - refactor: (Metek) Thanks to cutting edge technological advances, check_breath()
+      calculations have been optimized by approximately 41% ( using alist() instead
+      of list() )
+  - code_imp: (SmArtKar) Optimized bodypart code
+  - qol: hoods now automatically overslot hats - as in, like, if ur wearing a hat,
+      and flip a hood up, the hat will try to just go on top of the hood.
+  - bugfix: (hry-gh) chat storage should load more reliably
+  - server: (hry-gh) server operators can now properly disable the iframe chat storage
+      solution by unsetting the STORAGE_CDN_IFRAME config
+  - bugfix: (UwU) fixed improper chat caching.
+  - qol: (hry-gh) added chat messages when your chat storage has been reset
+  - bugfix: (hry-gh) if you've not been playing for awhile and came back, your chat
+      storage may have been reset. this should no longer happen
+  - qol: The Navigate verb should be slightly faster now.
+  - sound: Removed the goddamn screaming from the slime compressor.
+  - qol: (MTandi) Updated smart fridge UI
+  - qol: (MTandi) smart fridge UI now groups items by type+name instead of just type
+  - qol: (MTandi) smart fridge UI now shows item names next to the images
+  - qol: (MTandi) smart fridge UI has a list view option
+  - qol: (AyIong) SmartFridge got another redesign, and you can dispense all amount
+      of product in one click (RMB on product)
+  - qol: (JohnFulpWillard) Smartfridges now lets you set how many pills you want to
+      vend, rather than popping out a second separate tgui window.
+  - qol: (JohnFulpWillard) Smartfridges and Vending machines no longer have a setting
+      to change the list/grid mode, it instead updates automatically as you swap the
+      mode in-game.
+  - qol: (Melbert) Vending Machines have a search bar
+  - qol: '(AyIong) Vending machines got new design with 2 layouts: List and Grid'
+  - bugfix: (MTandi) Smartfridges properly dispense `\Improper` items
+  - bugfix: (JohnFulpWillard) Smartfridges on grid mode (like botany's) will no longer
+      instantly spit out all the items it has when you try to set how many it should
+      spit out.
+  - code_imp: (SyncIt21) tone of code organization for smart fridges overall. changed
+      ui to typescript.
+  Singul0:
+  - rscadd: Adds 4 new AI projects for you lots to tinker with! (Tray scanners, Engineering
+      Scan, Lights Controls, Advanced Tracking)
+  - balance: Adjusted human examine project cost to make the newly advanced tracking
+      easier to obtain 4K to 2K, reducing the strain to obtain advanced tracking from
+      9K to 7K.
+  Tractor-Maam:
+  - refactor: ported the TG fixes of the Portable Chemical Mixer, allowing it to properly
+      mix chemicals again.
+  - spellcheck: fixed a typo in the Advanced Tracking AI project
+  - code_imp: removed an unused define
