@@ -1,0 +1,6 @@
+author: "Mantlecrawler"
+delete-after: True
+changes:
+  - rscadd: "Ghost control smite now allows ghosts to force a mob to say things"
+  - rscadd: "Ghost control smite now allows ghosts to always punch, or shove, rather than relying on combat intent"
+  - bugfix: "Ghost command shove now actually shoves, rather than punching or helping, depending on intent of the mob."
