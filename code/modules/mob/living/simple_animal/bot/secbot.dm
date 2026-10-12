@@ -449,7 +449,7 @@
 		if(BOT_GREEN_HUNT) //Preparing to ANNOY target
 			// if can't reach perp for long enough, go idle
 			if(frustration >= 30 || (get_dist(src, target) > 15)) //He will follow you around for a very long time to make you turn yourself in, but will also stop if you get far enough away.
-				SSmove_manager.stop_looping(src)
+				GLOB.move_manager.stop_looping(src)
 				back_to_idle()
 				return
 
@@ -471,7 +471,7 @@
 			//Not next to perp- try to move closer
 			if (!Adjacent(target))
 				var/turf/olddist = get_dist(src, target)
-				SSmove_manager.move_to(src, target, 1, 2.5) //Moves faster than normal
+				GLOB.move_to(src, target, 1, 2.5) //Moves faster than normal
 				if((get_dist(src, target)) >= (olddist))
 					frustration++
 				else
