@@ -471,7 +471,7 @@
 			//Not next to perp- try to move closer
 			if (!Adjacent(target))
 				var/turf/olddist = get_dist(src, target)
-				GLOB.move_to(src, target, 1, 2.5) //Moves faster than normal
+				GLOB.move_manager.move_to(src, target, 1, 2.5) //Moves faster than normal
 				if((get_dist(src, target)) >= (olddist))
 					frustration++
 				else
